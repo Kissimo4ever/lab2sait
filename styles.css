@@ -1,0 +1,384 @@
+/* Внешняя таблица стилей */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f4;
+    color: #222;
+    line-height: 1.5;
+}
+
+header {
+    background: #245f91;
+    color: white;
+    padding: 24px 20px 18px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 6px 0 15px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 7px 12px;
+    margin: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: white;
+    color: #245f91;
+}
+
+main {
+    width: min(1000px, calc(100% - 30px));
+    margin: 25px auto;
+}
+
+section {
+    background: white;
+    margin-bottom: 24px;
+    padding: 24px;
+    border: 1px solid #d4d9de;
+    border-radius: 7px;
+}
+
+section > h2 {
+    color: #245f91;
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #dce8f2;
+}
+
+h3 {
+    color: #333;
+}
+
+a {
+    color: #1766a3;
+}
+
+code {
+    background: #eeeeee;
+    padding: 1px 4px;
+}
+
+/* Информация о студенте */
+.student-card {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.student-card figure {
+    margin: 0;
+    text-align: center;
+}
+
+.student-photo {
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
+    border: 2px solid #888;
+    background: #e5e5e5;
+}
+
+figcaption {
+    margin-top: 4px;
+    font-size: 13px;
+    color: #666;
+}
+
+.student-info {
+    flex: 1;
+    min-width: 260px;
+}
+
+.student-info h3 {
+    margin-top: 0;
+    color: #245f91;
+}
+
+.about-box {
+    margin-top: 20px;
+    padding: 15px 18px;
+    background: #f7f9fb;
+    border-left: 4px solid #4d87b5;
+}
+
+/* Таблицы */
+.table-wrap {
+    overflow-x: auto;
+    padding: 5px 0;
+}
+
+.table-a {
+    width: 680px;
+    max-width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 15px auto;
+}
+
+.table-a td {
+    border: 1px solid #333;
+    height: 28px;
+}
+
+.hint {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.table-b {
+    width: 360px;
+    height: 360px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: 15px auto;
+}
+
+.table-b td {
+    border: 1px solid #666;
+    padding: 0;
+}
+
+.teal { background: #18dfbd; }
+.pale { background: #fffec8; }
+.red { background: red; }
+.blue { background: blue; }
+.green { background: #00e81b; }
+.yellow { background: yellow; }
+
+/* Формы */
+.form-box {
+    margin: 18px 0 25px;
+    padding: 18px;
+    background: #fafafa;
+    border: 1px solid #c9c9c9;
+}
+
+.form-box h3 {
+    margin-top: 0;
+}
+
+.order-form {
+    max-width: 760px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 7px 0;
+    flex-wrap: wrap;
+}
+
+.form-row > label:first-child,
+.fake-label {
+    width: 205px;
+    text-align: right;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"] {
+    width: 280px;
+    padding: 4px;
+}
+
+.form-row .wide {
+    width: 440px !important;
+}
+
+.form-row .small-input {
+    width: 90px;
+}
+
+.form-row textarea {
+    width: 440px;
+    height: 70px;
+    resize: vertical;
+}
+
+.form-row select,
+.registration-form select,
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.form-row select {
+    padding: 3px;
+}
+
+.radio-row label,
+.checkbox-row label {
+    width: auto !important;
+    text-align: left !important;
+}
+
+.form-actions {
+    margin-left: 213px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.registration-form {
+    width: 620px;
+    max-width: 100%;
+    padding: 15px;
+    background: white;
+    border: 2px solid #4976b9;
+}
+
+.registration-form label {
+    display: block;
+    margin-top: 6px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="password"],
+.registration-form input[type="url"],
+.registration-form select {
+    width: 210px;
+    max-width: 100%;
+    padding: 3px;
+}
+
+.registration-form textarea {
+    width: 500px;
+    max-width: 100%;
+    height: 140px;
+}
+
+.registration-buttons {
+    margin-top: 10px;
+}
+
+/* Задание 3 */
+.css-demo {
+    width: 760px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Times New Roman", Times, serif;
+    color: #111;
+}
+
+.css-demo .main-title {
+    text-align: center;
+    letter-spacing: 7px;
+    color: #2d32cc;
+    text-shadow: 1px 1px 1px #999;
+}
+
+.css-demo .cyan-line {
+    background: #00efdc;
+    font-weight: bold;
+}
+
+.css-demo .violet-title {
+    color: #971084;
+    font-size: 24px;
+    border: 0;
+}
+
+.css-demo .example-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.css-demo .example-table th,
+.css-demo .example-table td {
+    border: 2px solid #777;
+    text-align: center;
+    height: 32px;
+}
+
+.css-demo .math-title {
+    text-align: center;
+    color: #3936bd;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.css-note {
+    margin-top: 25px;
+    background: #f2f2f2;
+    border: 1px dashed #999;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.back-top {
+    text-align: right;
+}
+
+.back-top a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .form-row {
+        display: block;
+    }
+
+    .form-row > label:first-child,
+    .fake-label {
+        display: block;
+        width: auto;
+        text-align: left;
+        margin-bottom: 3px;
+    }
+
+    .form-row input[type="text"],
+    .form-row input[type="password"],
+    .form-row .wide,
+    .form-row textarea {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .form-actions {
+        margin-left: 0;
+    }
+}

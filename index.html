@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №2 — HTML и CSS</title>
+
+    <!-- Внешний способ подключения CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Внутренний способ подключения CSS -->
+    <style>
+        #yellow-text {
+            background: yellow;
+            text-decoration: underline;
+        }
+
+        .gray-line {
+            background: #d8d8d8;
+        }
+
+        #table-label {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .field2 { background: #111; color: white; }
+        .field3 { background: #23dfe5; color: #2222aa; }
+        .field4 { background: #ff98db; }
+        .field5 { background: yellow; letter-spacing: 3px; }
+    </style>
+</head>
+<body>
+
+<header id="top">
+    <h1>Лабораторная работа №2</h1>
+    <p>Часть 1. «Технологии HTML, CSS»</p>
+    <nav>
+        <a href="#student">2.1 О студенте</a>
+        <a href="#tables">2.2 Таблицы</a>
+        <a href="#forms">2.3 Формы</a>
+        <a href="#css-task">3. CSS</a>
+    </nav>
+</header>
+
+<main>
+    <section id="student">
+        <h2>2.1. Информация о студенте</h2>
+
+        <div class="student-card">
+            <figure>
+                <img class="student-photo" src="student-photo.jpg" alt="Фото студента">
+                <figcaption>Фото студента</figcaption>
+            </figure>
+
+            <div class="student-info">
+                <h3>Персональная страница студента</h3>
+                <p><b>Чей сайт:</b> сайт студента Антонива Владислава.</p>
+                <p><b>Электронная почта:</b> <a href="mailto:antoniv@gmail.com">antoniv@gmail.com</a></p>
+                <p><b>Мой ВУЗ:</b> Нижневартовский государственный университет (НВГУ).</p>
+                <p><a href="https://nvsu.ru/" target="_blank">Официальный сайт НВГУ</a></p>
+                <p><b>Моя группа:</b> 3303</p>
+                <p><b>Моя будущая профессия:</b> программист 1C.</p>
+                <p><b>Мои увлечения:</b> Чтение классики фантастики.</p>
+            </div>
+        </div>
+
+        <div class="about-box">
+            <h3>Немного обо мне</h3>
+            <p>
+                Я играю, учусь.
+                Ну и ещё что-то делаю.
+            </p>
+
+            <h4>Что я изучаю:</h4>
+            <ul>
+                <li>HTML и CSS;</li>
+                <li>Робототехнику;</li>
+                <li>Английский;</li>
+                <li>Китайский.</li>
+            </ul>
+
+            <h4>Мои цели:</h4>
+            <ol>
+                <li>Закончить обучение.</li>
+                <li>Найти работу.</li>
+                <li>Не умереть от голода.</li>
+            </ol>
+
+            <p><small>Дата создания страницы: 28 сентября 2026 года.</small></p>
+        </div>
+    </section>
+
+    <section id="tables">
+        <h2>2.2. Таблицы</h2>
+
+        <h3>Таблица А</h3>
+        <div class="table-wrap">
+            <table class="table-a" aria-label="Таблица А">
+                <tr><td colspan="5"></td></tr>
+                <tr>
+                    <td rowspan="4"></td>
+                    <td></td>
+                    <td rowspan="4"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td rowspan="4"></td>
+                    <td rowspan="4"></td>
+                    <td></td>
+                </tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <p class="hint">Для построения таблицы использованы атрибуты <code>rowspan</code> и <code>colspan</code>.</p>
+
+        <h3>Таблица Б</h3>
+        <div class="table-wrap">
+            <table class="table-b" aria-label="Таблица Б">
+                <tr><td class="teal" colspan="7"></td></tr>
+                <tr>
+                    <td class="pale" rowspan="6"></td>
+                    <td class="teal" colspan="5"></td>
+                    <td class="pale" rowspan="6"></td>
+                </tr>
+                <tr>
+                    <td class="pale" rowspan="4"></td>
+                    <td class="teal" colspan="3"></td>
+                    <td class="pale" rowspan="4"></td>
+                </tr>
+                <tr>
+                    <td class="pale" rowspan="2"></td>
+                    <td class="red"></td>
+                    <td class="blue"></td>
+                    <td class="pale" rowspan="2"></td>
+                </tr>
+                <tr>
+                    <td class="green"></td>
+                    <td class="yellow"></td>
+                </tr>
+                <tr><td class="teal" colspan="3"></td></tr>
+                <tr><td class="teal" colspan="5"></td></tr>
+                <tr><td class="teal" colspan="7"></td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="forms">
+        <h2>2.3. Формы</h2>
+
+        <div class="form-box">
+            <h3>А. ЗАО «Птицефабрика №1»</h3>
+            <form class="order-form" action="#" method="post">
+                <div class="form-row">
+                    <label for="surname">Фамилия</label>
+                    <input id="surname" name="surname" type="text">
+                </div>
+
+                <div class="form-row">
+                    <label for="initials">Инициалы</label>
+                    <input id="initials" name="initials" type="text">
+                </div>
+
+                <div class="form-row">
+                    <label for="password1">Пароль</label>
+                    <input id="password1" name="password" type="password">
+                </div>
+
+                <div class="form-row">
+                    <label for="address">Адрес получателя</label>
+                    <input class="wide" id="address" name="address" type="text">
+                </div>
+
+                <div class="form-row">
+                    <label for="quantity">Количество</label>
+                    <input class="small-input" id="quantity" name="quantity" type="number" min="1">
+                </div>
+
+                <div class="form-row">
+                    <label for="bird">Тип</label>
+                    <select id="bird" name="bird">
+                        <option>Куриные</option>
+                        <option>Утиные</option>
+                        <option>Гусиные</option>
+                    </select>
+                    <select name="quality">
+                        <option>Отборные</option>
+                        <option>Первый сорт</option>
+                        <option>Второй сорт</option>
+                    </select>
+                </div>
+
+                <div class="form-row radio-row">
+                    <span class="fake-label">Доставка</span>
+                    <label><input type="radio" name="delivery" value="mail"> Почтой</label>
+                    <label><input type="radio" name="delivery" value="electronic"> Электронно</label>
+                    <label><input type="radio" name="delivery" value="courier"> Курьером</label>
+                </div>
+
+                <div class="form-row checkbox-row">
+                    <label for="invoice">Требуется накладная</label>
+                    <input id="invoice" name="invoice" type="checkbox">
+                </div>
+
+                <div class="form-row">
+                    <label for="extra">Дополнительная информация</label>
+                    <textarea id="extra" name="extra"></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Заказать</button>
+                    <button type="reset">Отменить</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box">
+            <h3>Б. Пример формы регистрации сайта</h3>
+            <form class="registration-form" action="#" method="post" enctype="multipart/form-data">
+                <label for="login">Логин:</label>
+                <input id="login" name="login" type="text">
+
+                <label for="password2">Пароль:</label>
+                <input id="password2" name="password2" type="password">
+
+                <label for="site-url">URL-адрес сайта:</label>
+                <input id="site-url" name="site-url" type="url" value="http://">
+
+                <label for="site-name">Название сайта:</label>
+                <input id="site-name" name="site-name" type="text">
+
+                <label for="description">Описание сайта:</label>
+                <textarea id="description" name="description"></textarea>
+
+                <label for="theme">Тема сайта:</label>
+                <select id="theme" name="theme">
+                    <option>Тема не выбрана</option>
+                    <option>Компьютеры</option>
+                    <option>Образование</option>
+                    <option>Спорт</option>
+                </select>
+
+                <label for="banner">Баннер 88×31:</label>
+                <input id="banner" name="banner" type="file">
+
+                <div class="registration-buttons">
+                    <button type="reset">Очистить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="css-task">
+        <h2>Задание 3. Использование технологии CSS</h2>
+
+        <div class="css-demo">
+            <h1 class="main-title">Таблицы в HTML</h1>
+
+            <!-- inline CSS -->
+            <p style="text-align:center; font-size:19px;">
+                <span class="cyan-line">Одним из наиболее мощных и широко применяемых в HTML средств являются
+                <i style="font-size:25px;">таблицы</i>.</span>
+            </p>
+
+            <p style="text-align:center;">
+                <span id="yellow-text">Понятие табличного представления данных не нуждается в дополнительном пояснении.</span>
+                В HTML таблицы используются не только традиционно, как метод представления данных,
+                но и как средство форматирования Web-страниц.
+            </p>
+
+            <h2 class="violet-title">Создание простейших HTML-таблиц</h2>
+
+            <p>
+                <strong style="background:#ff00cf; color:#1700a8; font-size:23px; font-style:italic;">Описание</strong>
+                таблиц должно располагаться внутри раздела документа <code>&lt;BODY&gt;</code>.
+            </p>
+
+            <p style="text-align:center; font-size:18px;">
+                Каждая <a href="#table1" style="color:#1937d9; font-size:21px;">таблица</a>
+                должна начинаться тегом <code>&lt;TABLE&gt;</code> и завершаться тегом <code>&lt;/TABLE&gt;</code>.
+            </p>
+
+            <p style="text-align:center;">
+                <span class="gray-line">
+                    <em style="color:#1c2bc3; text-decoration:underline;">Каждая</em> строка начинается тегом
+                    <code>&lt;TR&gt;</code> и завершается тегом <code>&lt;/TR&gt;</code>.
+                    <strong style="color:#d32535; font-style:italic;">Отдельная</strong> ячейка оформляется
+                    тегами <code>&lt;TD&gt;</code> и <code>&lt;/TD&gt;</code>.
+                </span>
+            </p>
+
+            <p id="table-label">Таблица 1</p>
+            <h3 class="math-title">Математические выражения</h3>
+
+            <table id="table1" class="example-table">
+                <tr>
+                    <th style="text-align:left; font-style:italic;">Поле1</th>
+                    <th class="field2">Поле 2</th>
+                    <th class="field3">Поле 3</th>
+                    <th class="field4">Поле 4</th>
+                    <th class="field5">Поле5</th>
+                </tr>
+                <tr>
+                    <td style="color:#1c2bc3; font-weight:bold;">(a+b)<sup>2</sup></td>
+                    <td>a<sup>2</sup>-b<sup>2</sup></td>
+                    <td style="color:#1c2bc3; font-weight:bold;">(a-b)<sup>3</sup></td>
+                    <td>A<sub>1</sub>+A<sub>2</sub>+...A<sub>i</sub></td>
+                    <td style="color:#1c2bc3; font-weight:bold;">y=x<sup>2</sup></td>
+                </tr>
+            </table>
+
+            <p class="css-note">
+                В этом задании использованы три способа применения CSS: внешний файл,
+                внутренний тег <code>&lt;style&gt;</code> и атрибут <code>style</code>.
+                Также используются классы <code>class</code> и идентификаторы <code>id</code>.
+            </p>
+        </div>
+    </section>
+
+    <p class="back-top"><a href="#top">↑ Наверх</a></p>
+</main>
+
+<footer>
+    Лабораторная работа №2, 2026
+</footer>
+
+</body>
+</html>
